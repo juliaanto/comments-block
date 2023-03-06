@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Блок с комментариями">
+    <title>Комментарии</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  </head>
+  <body class="body">
+    <form class="comment-form">
+      <div class="form-field">
+        <label class="form-field__label" for="name">Имя</label>
+        <input class="form-field__input" type="text" id="name" name="name" required minlength="4" maxlength="15" size="10">
+      </div>
+      <div class="form-field">
+        <label class="form-field__label" for="comment">Комментарий</label>
+        <textarea class="form-field__input form-field__input_comment" id="comment" name="comment" required></textarea>
+      </div>
+    </form>
+    <div id="comments"></div>
+    <script src="js/load-comments.js"></script>
+    <script src="js/show-comments.js"></script>
+  </body>
