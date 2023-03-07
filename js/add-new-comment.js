@@ -9,6 +9,12 @@ addCommentButton.addEventListener('click', () => {
     newComment[entry[0]] = entry[1];
   }
 
+  if (newComment.date === "") {
+    newComment.date = Date.now();
+  } else {
+    newComment.date = new Date(newComment.date).getTime();
+  }
+
   const updatedComments = [...comments, newComment];
   localStorage.setItem('comments', JSON.stringify(updatedComments));
   window.location.reload();
