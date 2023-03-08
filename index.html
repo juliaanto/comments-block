@@ -8,25 +8,26 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
   </head>
   <body class="body">
-    <form class="comment-form">
-      <div class="form-field">
-        <label class="form-field__label form-field__label_required" for="username">Имя</label>
-        <input class="form-field__input" type="text" id="username" name="username" required>
-      </div>
-      <div class="form-field">
-        <label class="form-field__label" for="date">Дата</label>
-        <input class="form-field__input" type="text" onfocus="(this.type='date')" id="date" name="date">
-      </div>
-      <div class="form-field">
-        <label class="form-field__label form-field__label_required" for="commentText">Комментарий</label>
-        <textarea class="form-field__input form-field__input_comment" id="commentText" name="commentText" required></textarea>
-      </div>
-      <button class="submit-button" type="submit">Отправить</button>
-    </form>
-    <div id="comments">
+    <div class="wrapper">
+      <form class="comment-form">
+        <div class="form-field">
+          <label class="form-field__label form-field__label_required" for="username">Имя</label>
+          <input class="form-field__input" type="text" id="username" name="username" required>
+        </div>
+        <div class="form-field">
+          <label class="form-field__label" for="date">Дата</label>
+          <input class="form-field__input" type="text" onfocus="(this.type='date')" id="date" name="date">
+        </div>
+        <div class="form-field form-field_comment">
+          <label class="form-field__label form-field__label_required" for="commentText">Комментарий</label>
+          <textarea class="form-field__input form-field__input_comment" id="commentText" name="commentText" required></textarea>
+        </div>
+        <button class="submit-button" type="submit">Отправить</button>
+      </form>
+      <div class="comments"></div>
     </div>
     <script src="js/initial-comments.js"></script>
     <script src="js/load-comments.js"></script>
