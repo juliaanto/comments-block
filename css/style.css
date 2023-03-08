@@ -101,6 +101,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 }
 
 .comment {
+  position: relative;
   border-top: 1px solid #e6e6e6;
   padding-top: 20px;
 }
@@ -119,4 +120,22 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 .comment__date {
   margin: 0;
   color: #757575;
+}
+
+.comment__delete-button {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.comment__delete-button > svg {
+  fill: #757575;
+}
+
+.comment__delete-button:hover > svg {
+  fill: #000000;
 }
