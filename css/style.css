@@ -95,20 +95,18 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
 }
 
 .comment {
   position: relative;
   border-top: 1px solid #e6e6e6;
   padding-top: 20px;
+  padding-bottom: 5px;
 }
 
 .comments-count {
   font-size: 16px;
-  margin: 0;
+  margin: 0 0 30px;
   font-weight: 500;
 }
 
@@ -122,20 +120,31 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
   color: #757575;
 }
 
-.comment__delete-button {
-  position: absolute;
-  top: 25px;
-  right: 20px;
+.comment__button {
   border: none;
   background-color: transparent;
   cursor: pointer;
   padding: 0;
 }
 
-.comment__delete-button > svg {
+.comment__button_delete {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+}
+
+.comment__button_like {
+  opacity: 1;
+}
+
+.comment__button_like:hover {
+  opacity: 0.8;
+}
+
+.comment__button_delete > svg {
   fill: #757575;
 }
 
-.comment__delete-button:hover > svg {
+.comment__button_delete:hover > svg {
   fill: #000000;
 }
