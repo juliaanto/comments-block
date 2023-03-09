@@ -12,7 +12,8 @@ form.onsubmit = () => {
   if (newComment.date === "") {
     newComment.date = Date.now();
   } else {
-    newComment.date = new Date(newComment.date).getTime();
+    const userDate = new Date(newComment.date);
+    newComment.date = new Date(userDate.getFullYear(), userDate.getMonth(), userDate.getDate()).getTime();
   }
 
   const updatedComments = [...comments, newComment];
