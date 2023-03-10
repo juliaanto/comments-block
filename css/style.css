@@ -113,7 +113,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
   position: relative;
   border-top: 1px solid #e6e6e6;
   padding-top: 20px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }
 
 .comments-count {
@@ -132,6 +132,18 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
   color: #757575;
 }
 
+.comment__likes {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.comment__likes-count {
+  margin: 0;
+  color: #383838;
+  line-height: 1;
+}
+
 .comment__button {
   border: none;
   background-color: transparent;
@@ -147,6 +159,8 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 
 .comment__button_like {
   opacity: 1;
+  width: 22px;
+  height: 22px;
 }
 
 .comment__button_like:hover {

@@ -17,6 +17,8 @@ form.onsubmit = (event) => {
     newComment.date = new Date(userDate.getFullYear(), userDate.getMonth(), userDate.getDate()).getTime();
   }
 
+  newComment.likesCount = 0;
+
   if (isFormValid(newComment)) {
     const updatedComments = [...comments, newComment];
     localStorage.setItem('comments', JSON.stringify(updatedComments));
