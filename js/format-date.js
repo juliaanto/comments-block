@@ -8,7 +8,6 @@ function formatDate(timestamp) {
   const tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
   
   let day;
-  
   if (commentDate >= today && commentDate < tomorrow) {
     day = 'сегодня,';
   } else if (commentDate >= yesterday && commentDate < today) {
@@ -17,8 +16,16 @@ function formatDate(timestamp) {
     day = `${commentDate.getDate()} ${MONTH_NAMES[commentDate.getMonth()]}`;
   }
   
+  const year = commentDate.getFullYear();
   const hours = commentDate.getHours() < 10 ? "0" + commentDate.getHours() : commentDate.getHours();
   const minutes = commentDate.getMinutes() < 10 ? "0" + commentDate.getMinutes() : commentDate.getMinutes();
 
-  return `${day} ${hours}:${minutes}`;
+  let formattedDate;
+  if (year < now.getFullYear()) {
+    formattedDate = `${day} ${year}`;
+  } else {
+    formattedDate = `${day} ${hours}:${minutes}`;
+  }
+  
+  return formattedDate;
 }
