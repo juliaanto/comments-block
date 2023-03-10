@@ -23,7 +23,7 @@ function showMessage(elementId, messageText) {
   
   element.classList.add('form-field__input_invalid');
   
-  element.onfocus = function() {
+  element.oninput = function() {
     if (this.classList.contains('form-field__input_invalid')) {
       this.classList.remove('form-field__input_invalid');
       this.nextElementSibling.remove();

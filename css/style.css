@@ -62,6 +62,10 @@
   border-color: #fa5d29;
 }
 
+.form-field__input_invalid:focus {
+  border-color: #fa5d29;
+}
+
 .form-field__message {
   color: #fa5d29;
   font-size: 12px;
