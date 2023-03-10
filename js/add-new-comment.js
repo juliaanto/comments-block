@@ -1,12 +1,13 @@
 const form = document.forms["comment-form"];
 const addCommentButton = form["submit-button"];
 
-form.onsubmit = () => {
+form.onsubmit = (event) => {
+  event.preventDefault();
   const formData = new FormData(form);
   const newComment = {};
 
-  for (let entry of formData.entries()) {
-    newComment[entry[0]] = entry[1];
+  for (let [key, value] of formData.entries()) {
+    newComment[key] = value;
   }
 
   if (newComment.date === "") {
@@ -16,6 +17,9 @@ form.onsubmit = () => {
     newComment.date = new Date(userDate.getFullYear(), userDate.getMonth(), userDate.getDate()).getTime();
   }
 
-  const updatedComments = [...comments, newComment];
-  localStorage.setItem('comments', JSON.stringify(updatedComments));
+  if (isFormValid(newComment)) {
+    const updatedComments = [...comments, newComment];
+    localStorage.setItem('comments', JSON.stringify(updatedComments));
+    window.location.reload();
+  }
 }

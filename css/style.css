@@ -48,10 +48,6 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.form-field__input:first-child {
-  display: none;
-}
-
 .form-field__input:focus {
   outline: none;
   border-color: #a7a7a7;
@@ -60,6 +56,17 @@
 .form-field__input_comment {
   height: 150px;
   padding: 16px 16px 0;
+}
+
+.form-field__input_invalid {
+  border-color: #fa5d29;
+}
+
+.form-field__message {
+  color: #fa5d29;
+  font-size: 12px;
+  font-weight: 300;
+  margin: 10px 0;
 }
 
 .submit-button {
@@ -140,6 +147,11 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 
 .comment__button_like:hover {
   opacity: 0.8;
+}
+
+.comment__button_like:active {
+  scale: 0.8;
+  transition: scale 0.1s;
 }
 
 .comment__button_delete > svg {
