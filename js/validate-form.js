@@ -1,10 +1,10 @@
 function isFormValid(formData) {
   const emptyFieldMessage = 'Заполните это поле.';
 
-  const isUsernameEmpty = formData['username'].length < 1 || formData['username'].trim().length === 0;
+  const isUsernameEmpty = formData['username'].trim().length === 0;
   isUsernameEmpty && showMessage('username', emptyFieldMessage);
 
-  const isCommentTextEmpty = formData['commentText'].length < 1 || formData['commentText'].trim().length === 0;
+  const isCommentTextEmpty = formData['commentText'].trim().length === 0;
   isCommentTextEmpty && showMessage('commentText', emptyFieldMessage);
 
   const isFormValid = !isUsernameEmpty && !isCommentTextEmpty;

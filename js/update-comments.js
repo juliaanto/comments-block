@@ -40,7 +40,7 @@ function showCommentsCount() {
 }
 
 function showComments() {
-  for (comment of comments) {
+  for (const comment of comments) {
     commentsElement.insertAdjacentHTML("beforeend",
     `<div class="comment" data-key="${comments.indexOf(comment)}">
       <p class="comment__username">${comment.username}</p>
